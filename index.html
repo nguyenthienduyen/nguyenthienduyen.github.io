@@ -9,6 +9,9 @@
 	
 <body>
 <section id="background">
+<button id="movetop" onClick="topFunction()">
+<i class="fas fa-chevron-up movebtn"></i>
+    </button>
 	<header>
 	<div id="bg">
 	<div class="menu">
@@ -169,5 +172,23 @@
 		<center><h3 id="copyright">&copy; Copyright 2020. SmartNews By NH</h3></center>
 	</div>
 </footer>
+<script src="js/jquery-2.1.4.min.js"></script><!-- jQuery library -->
+<script>
+				window.onscroll = function () {
+					scrollFunction()
+				};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+						document.getElementById("movetop").style.display = "block";
+					} else {
+						document.getElementById("movetop").style.display = "none";
+					}
+				}
+								function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+</script>
 </body>
 </html>
